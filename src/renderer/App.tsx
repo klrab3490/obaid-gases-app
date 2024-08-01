@@ -9,38 +9,38 @@ import Reports from './pages/Reports';
 import Certificates from './pages/Certificates';
 
 export default function App() {
-    const [isDBConnected, setIsDBConnected] = useState(false);
+  const [isDBConnected, setIsDBConnected] = useState(false);
 
-    useEffect(() => {
-        const handleDBConnection = (arg: unknown) => {
-            setIsDBConnected(arg === 'connected');
-        };
+  useEffect(() => {
+    const handleDBConnection = (arg: unknown) => {
+      setIsDBConnected(arg === 'connected');
+    };
 
-        window.electron.ipcRenderer.connectToMondoDB();
-        window.electron.ipcRenderer.once(
-            'connect-to-mongodb',
-            handleDBConnection as (...args: unknown[]) => void,
-        )
-    },[])
-
-    return (
-        <div>
-            {!isDBConnected && (
-                <div className="flex justify-center items-center h-screen">
-                    <p className="text-2xl">Connecting to database...</p>
-                </div>
-            )}
-            {isDBConnected && (
-                <Router>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/form-1" element={<Form1 />} />
-                        <Route path="/form-2" element={<Form2 />} />
-                        <Route path="/certificates" element={<Certificates />} />
-                        <Route path="/reports" element={<Reports />} />
-                    </Routes>
-                </Router>
-            )}
-        </div>
+    window.electron.ipcRenderer.connectToMondoDB();
+    window.electron.ipcRenderer.once(
+      'connect-to-mongodb',
+      handleDBConnection as (...args: unknown[]) => void,
     );
+  }, []);
+
+  return (
+    <div>
+      {!isDBConnected && (
+        <div className="flex justify-center items-center h-screen">
+          <p className="text-2xl">Connecting to database...</p>
+        </div>
+      )}
+      {isDBConnected && (
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/form-1" element={<Form1 />} />
+            <Route path="/form-2" element={<Form2 />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/reports" element={<Reports />} />
+          </Routes>
+        </Router>
+      )}
+    </div>
+  );
 }
