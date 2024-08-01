@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-console
 import mongoose from 'mongoose';
 
 export default async function connectToMondoDB() {

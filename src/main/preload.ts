@@ -18,7 +18,7 @@ const electronHandler = {
         ipcRenderer.removeListener(channel, subscription);
       };
     },
-    // Listens to only one message from IPC Channel 
+    // Listens to only one message from IPC Channel
     once(channel: Channels, func: (...args: unknown[]) => void) {
       ipcRenderer.once(channel, (_event, ...args) => func(...args));
     },

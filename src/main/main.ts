@@ -27,7 +27,7 @@ class AppUpdater {
 let mainWindow: BrowserWindow | null = null;
 
 // Connect to MongoDB
-ipcMain.on('connect-to-mongodb',async (event) => {
+ipcMain.on('connect-to-mongodb', async (event) => {
   try {
     await connectToMondoDB();
     event.reply('connect-to-mongodb', 'connected');
