@@ -1,17 +1,13 @@
-# Avittathur Church Management Project ⛪
+# Obaid Gases LLC
 
 <br/>
-
-## Links
-
-- [Figma Design](https://www.figma.com/file/EkP5HKTgBbmwLAG8rJ2KdC/Church-Management?type=design&node-id=0-1&mode=design&t=fpnyMK59ugCZvDNQ-0)
 
 ## Install
 
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/vivekkj123/avittathur-church-mgmt-project.git
+git clone https://github.com/klrab3490/obaid-gases-app.git
 cd obaid-gases-app
 npm install
 ```
