@@ -3,7 +3,7 @@ import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
 import './App.css';
 import Home from './pages/Home';
-import Invoice from './pages/invoice';
+import Invoice from './pages/Invoice';
 import Customers from './pages/Customers';
 import Daily from './pages/Daily';
 import Products from './pages/Products';
