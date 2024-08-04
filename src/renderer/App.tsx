@@ -3,10 +3,13 @@ import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
 import './App.css';
 import Home from './pages/Home';
-import Form1 from './pages/Form-1';
-import Form2 from './pages/Form-2';
-import Reports from './pages/Reports';
-import Certificates from './pages/Certificates';
+import Invoice from './pages/Invoice';
+import Customers from './pages/Customers';
+import Daily from './pages/Daily';
+import Products from './pages/Products';
+import DepositeCylinder from './pages/DepositeCylinder';
+import SalesReport from './pages/SalesReport';
+import Statement from './pages/Statement';
 
 export default function App() {
   const [isDBConnected, setIsDBConnected] = useState(false);
@@ -34,10 +37,13 @@ export default function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/form-1" element={<Form1 />} />
-            <Route path="/form-2" element={<Form2 />} />
-            <Route path="/certificates" element={<Certificates />} />
-            <Route path="/reports" element={<Reports />} />
+            <Route path="/invoice" element={<Invoice />} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/daily" element={<Daily />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/deposite-cylinder" element={<DepositeCylinder />} />
+            <Route path="/sales-report" element={<SalesReport />} />
+            <Route path="/statement" element={<Statement />} />
           </Routes>
         </Router>
       )}

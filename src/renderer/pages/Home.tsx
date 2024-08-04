@@ -9,17 +9,17 @@ function Home() {
         <h2 className="text-textPrimary font-bold text-2xl"> Daily Entry </h2>
         <div className="py-10 grid grid-cols-1 md:grid-cols-2 md:gap-x-40 xl:grid-cols-3 gap-10">
           <MenuChip
-            route="/form-1"
+            route="/invoice"
             title="Invoice"
             description="Adding or managing new invoice"
           />
           <MenuChip
-            route="/invoice"
+            route="/daily"
             title="Items Bought"
             description="Adding or managing items bought"
           />
           <MenuChip
-            route="/customers"
+            route="/deposite-cylinder"
             title="Deposit Cylinder"
             description="Adding or managing deposit cylinder"
           />
@@ -29,7 +29,7 @@ function Home() {
         <h2 className="text-textPrimary font-bold text-2xl"> Manage </h2>
         <div className="py-10 grid grid-cols-1 md:grid-cols-2 md:gap-x-40 xl:grid-cols-3 gap-10">
           <MenuChip
-            route="/form-1"
+            route="/products"
             title="Products"
             description="Manage your products"
           />
@@ -46,12 +46,12 @@ function Home() {
         </h2>
         <div className="py-10 grid grid-cols-1 md:grid-cols-2 md:gap-x-40 xl:grid-cols-3 gap-10">
           <MenuChip
-            route="/form-1"
+            route="/statement"
             title="Generate Statement"
             description="Generates statement for credit based customers"
           />
           <MenuChip
-            route="/customers"
+            route="/sales-report"
             title="Generate Sales Report"
             description="Generate Report for sales and other missalanious expenses"
           />

@@ -1,6 +1,6 @@
 import TopBar from '../components/TopBar';
 
-function Reports() {
+function Customers() {
   return (
     <div className="ring-4 ring-bgSecondary p-10 rounded-xl">
       <TopBar />
@@ -8,4 +8,4 @@ function Reports() {
   );
 }
 
-export default Reports;
+export default Customers;
